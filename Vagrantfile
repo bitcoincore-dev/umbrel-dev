@@ -60,7 +60,7 @@ Vagrant.configure(2) do |config|
   # Install Umbrel
   config.vm.provision "shell", inline: <<-SHELL
     apt-get install -y fswatch rsync jq
-    cd /vagrant/getumbrel/umbrel
+    cd /vagrant/bitcoincore-dev/umbrel
     sudo NETWORK=regtest ./scripts/configure
     docker-compose build --parallel
     docker-compose run dashboard -c yarn
